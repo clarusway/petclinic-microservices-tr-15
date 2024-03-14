@@ -19,6 +19,9 @@ pipeline {
             steps {
                 echo 'Packaging the app into jars with maven'
                 }
+        }
+    }
+}
 //                 sh ". ./jenkins/package-with-maven-container.sh"
 //             }
 //         }
