@@ -7,11 +7,11 @@ pipeline {
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
         AWS_REGION="us-east-1"
         ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
-        RANCHER_URL="https://ranchertr.clarusway.us"
+        RANCHER_URL="https://rancher.clarusway.us"
         // Get the project-id from Rancher UI (projects/namespaces --> petclinic-cluster-staging namespace --> Edit yaml --> copy projectId )
-        RANCHER_CONTEXT="c-m-tqgprpnm:p-m6k56" 
+        RANCHER_CONTEXT="c-m-b6d48vsq:p-j7kgg" 
        //First part of projectID
-        CLUSTERID="c-m-tqgprpnm"
+        CLUSTERID="c-m-b6d48vsq"
         RANCHER_CREDS=credentials('j-rancher-petclinic-credentials')
     }
     stages {
